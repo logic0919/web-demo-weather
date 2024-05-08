@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/qweather-icons@1.4.0/font/qweather-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="render.js"></script>
+    <script src="canvas.js"></script>
+</head>
+
+<body>
+    <!-- <i class='qi-307'></i> -->
+    <div>
+        <div class="fw-header">
+            <div class="fw-header-top">
+                <div class="fw-header-main">
+                    <img src="img/logo.png" alt="logo" style="height: 156px; height: 37px;margin-top: 10px;">
+                    <ul class="ul">
+                        <li>
+                            <a href="https://www.qq.com/" style="color: #fff;font-size:10px;">腾讯网首页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" style="color: #fff;font-size:10px;">无障碍阅读</a>
+                        </li>
+                        <li style="font-size:17px;" class="place"></li>
+                        <li style="font-size:15px;" class="care-inf"></li>
+                    </ul>
+                    <div class="care-city">关注的城市
+                        <div class="care-city1"></div>
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="搜索市、区、县等" class="search-input">
+                        <div class="search-show">
+                            <ol class="search-show-ol"></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fw-current">
+            <div class="fw-current-main">
+                <p style="font-size: 14px;color: #fff;opacity: .6;">中央气象台发布</p>
+                <div class="se">
+                    <em>32C</em><i>多云</i>
+                    <div class="inf1">32 良
+                    </div>
+                    <!-- <div class="inf2">高温预警</div> -->
+                </div>
+                <div class="th">
+                    <div>东北风 2级</div>
+                    <div>温度 55%</div>
+                    <div>气压 932hPa</div>
+                </div>
+                <div class="fo">
+                    <div></div>
+                    <em>&nbsp;你若安好，便是晴天~&nbsp;</em>
+                    <a href=""></a>
+                </div>
+                <div class="fi">
+                    <img src="img/current.png" alt="">
+                </div>
+            </div>
+            <div class="slider1">
+                <div class="triangle"></div>
+                <div class="top">空气质量指数 32 优</div>
+                <div class="bottom">
+                    <div>
+                        <p style="font-size: 14px;color: #555;line-height: 35px;">8</p>
+                        <p style="font-size: 12px;color: #9f9f9f;">PM2.5</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 14px;color: #555;line-height: 35px;">8</p>
+                        <p style="font-size: 12px;color: #9f9f9f;">PM2.5</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 14px;color: #555;line-height: 35px;">8</p>
+                        <p style="font-size: 12px;color: #9f9f9f;">PM2.5</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 14px;color: #555;line-height: 35px;">8</p>
+                        <p style="font-size: 12px;color: #9f9f9f;">PM2.5</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 14px;color: #555;line-height: 35px;">8</p>
+                        <p style="font-size: 12px;color: #9f9f9f;">PM2.5</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 14px;color: #555;line-height: 35px;">8</p>
+                        <p style="font-size: 12px;color: #9f9f9f;">PM2.5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fw-main">
+            <div class="fw-main1">
+                <div class="fw-main1-top">
+                    <div class="fi"></div>
+                    <em>&nbsp;逐小时预报&nbsp;</em>
+                    <i>数据来源于中国天气网</i>
+                    <div class="turn">
+                        <p style="display: inline-block;">left</p>
+                        <p style="display: inline-block;">right</p>
+                    </div>
+                </div>
+                <div class="fw-main1-bottom"></div>
+            </div>
+            <div class="fw-main2">
+                <div class="fw-main2-left">
+                    <div class="fw-main2-left-top">
+                        <div class="fi"></div>
+                        <i style="font-size: 18px;">&nbsp;&nbsp;&nbsp;7日天气预报</i>
+                        <button class="th">15日天气预报</button>
+                    </div>
+                    <div class="fw-main2-left-bottom">
+                    </div>
+                </div>
+                <div class="fw-main2-right">
+                    <div class="fw-main2-right-top">
+                        <div class="fi"></div>
+                        <div style="font-size: 18px;" class="se">&nbsp;&nbsp;&nbsp;生活指数</div>
+                        <div class="turn">
+                            <p style="display: inline-block;">left</p>
+                            <p style="display: inline-block;">right</p>
+                        </div>
+                    </div>
+                    <div class="fw-main2-right-bottom">
+                        <!-- 注意是下面这一行的div里面有12个子元素 -->
+                        <!-- 下面这一行的div宽度是200% -->
+                        <div>
+                            <!-- 下面这一行的div表示一个小的十二分之一的小模块div，只是容器 -->
+                            <!-- 会被复制成12份 -->
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣这是第二页，轮播后的效果&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 下面这一行是实际高度，140*2=280px -->
+                                <div>
+                                    <div class="icon">
+                                        <p style="margin-top:36px;margin-bottom: 16px;">aa</p>
+                                        <p style="font-size: 16px;color: #384c78;">穿衣&nbsp;舒适</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p style="font-size: 13px;color: #384c78;">
+                                            天气较好，天气较热，总体来说还是好天气，还是较适宜旅游的，您仍可陶醉于大自然的美丽风光中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fw-footer">
+            <div class="footer-img">
+                <a href=""><img src="img/footer1.png" alt=""></a>
+                <a href="http://www.nmc.cn/"><img src="img/footer2.png" alt=""
+                        style="margin-left:66px;margin-right:66px;"></a>
+                <a href="http://www.weather.com.cn/"><img src="img/footer3.png" alt=""></a>
+            </div>
+            <a href="https://www.tencent.com/zh-cn/">关于腾讯</a> | <a href="ttps://www.tencent.com/zh-cn/">About
+                Tencent</a> | <a href="https://www.qq.com/contract.shtml">服务协议</a> | <a
+                href="https://privacy.qq.com/policy/tencent-privacypolicy">隐私政策</a> | <a
+                href="https://open.tencent.com/">开放平台</a> | <a href="https://e.qq.com/ads/">广告服务</a> | <a
+                href="https://careers.tencent.com/">腾讯招聘</a> | <a href="https://gongyi.qq.com/">腾讯公益</a> | <a
+                href="https://kf.qq.com/">客服中心</a> | <a
+                href="https://news.qq.com/zt2014/2014qtnews/ccybspxd.htm">举报中心</a> | <a
+                href="https://www.qq.com/">网站导航</a>
+            <br><br><br>Copyright © 1998 - 2023 Tencent. All Rights Reserved
+            <br><br><br>腾讯公司 版权所有
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,508 @@
+* {
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+    float: left;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+canvas{
+    position: absolute;
+    top: 150px;
+    left: 0px;
+}
+/* header部分 */
+.fw-header {
+    width: 100%;
+    height: 107px;
+    background:linear-gradient(to right,rgb(101, 180, 249),rgb(101, 121, 246));
+}
+
+.fw-header-top {
+    width: 100%;
+    height: 65px;
+    border: 1px solid #89b3f9;
+}
+
+.fw-header-main {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.fw-header-main ul {
+    position: absolute;
+    left: 500px;
+    top: 25px;
+    color: #fff;
+}
+
+.fw-header-main ul li{
+    margin-right: 20px;
+}
+
+.search {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    width: 276px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.search input {
+    width: 240px;
+    height: 12px;
+    margin-left: 13px;
+    margin-top: 6px;
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+
+}
+
+.search-show{
+    position: absolute;
+    top:35px;
+    right:0px;
+    width: 276px;
+    background-color: rgb(255,255,255);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: auto;
+    /* display: none; */
+}
+.search-show-ol{
+    position: absolute;
+    top:0px;
+    left:-20px;
+}
+.search-show-ol li{
+    float:none;
+    margin-bottom:18px;
+    margin-top:18px;
+    font-size:12px;
+
+}
+.place{
+    position: relative;
+}
+.care-city{
+    color:#9fa1a3;
+    font-size: 12px;
+    position: absolute;
+    top:57px;
+    right:280px;
+    z-index: 2;
+    background-color:rgb(255,255,255);
+    border-radius: 10px;
+    width: 418px;
+    padding:20px;
+    /* display: none; */
+}
+.care-city p{
+    position: relative;
+    font-size: 14px;
+    margin-top:18px;
+    color:#595757;
+}
+.care-city p a{
+    position: absolute;
+    right:5px;
+    color:#595757;
+}
+/* current部分 */
+.fw-current {
+    width: 100%;
+    background: linear-gradient(to right, rgb(101, 180, 249), rgb(101, 121, 246));
+    position: relative;
+}
+
+.fw-current-main {
+    position: relative;
+    width: 1200px;
+    height: 268px;
+    margin: 0 auto;
+}
+
+.fw-current-main .se em {
+    font-size: 86px;
+    color: #fff;
+}
+
+.fw-current-main .se i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.fw-current-main .se .inf1,
+.fw-current-main .se .inf2 {
+    position: relative;
+    display: inline-block;
+    margin-left: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+    background-color: #f0cc35;
+    color: #fff;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.fw-current-main .se .inf1 {
+    background-color: rgb(163, 215, 101);
+}
+
+.fw-current .slider1 {
+    display: none;
+    position: absolute;
+    top:106px;
+    left:260px;
+    display: none;
+}
+
+.fw-current .slider1 .triangle {
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-color: rgb(163, 215, 101);
+    margin-left:117px;
+}
+
+.fw-current .slider1 .top {
+    background-color: rgb(163, 215, 101);
+    width: 252px;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+
+.fw-current .slider1 .bottom {
+    background-color: #fff;
+    width: 252px;
+    height: 127px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fw-current .slider1 .bottom>div {
+    width: 82px;
+    height: 62px;
+    border: 1px solid #c5bebe;
+    text-align: center;
+}
+
+.fw-current-main .th {
+    margin-top: 15px;
+    margin-bottom: 28px;
+}
+
+.fw-current-main .th div {
+    display: inline-block;
+    color: #fff;
+    margin-right: 42px;
+    font-size: 18px;
+}
+
+.fw-current-main .fo div {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.fw-current-main .fo em {
+    color: #fff;
+    font-size: 20px;
+}
+
+.fw-current-main .fi {
+    position: absolute;
+    top: 51px;
+    right: 82px;
+    width: 134px;
+    height: 134px;
+}
+
+/* fw-main部分 */
+.fw-main {
+    padding-top: 130px;
+    padding-bottom: 40px;
+    background-color: rgb(246, 249, 254);
+}
+
+/* main1部分 */
+.fw-main1 {
+    background-color: #fff;
+    ;
+    padding-top: 18px;
+    width: 1200px;
+    height: 170px;
+    margin: 0 auto;
+    /* margin-top:130px; */
+    border: 1px solid #e5e5e5;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.fw-main1-top {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.fw-main1-top .fi {
+    display: inline-block;
+    margin-left: 15px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.fw-main1-top em {
+    font-size: 17px;
+}
+
+.fw-main1-top i {
+    font-size: 12px;
+    color: #8a9baf;
+}
+
+.fw-main1-top .turn{
+    position: absolute;
+    top:0px;
+    right:20px;
+}
+.fw-main1-bottom {
+    transition: all 2s;
+    display: flex;
+    justify-content: space-around;
+    width: 2700px;
+    height: 150px;
+}
+
+.fw-main1-bottom .time {
+    color: #8a9baf;
+    font-size: 14px;
+}
+
+.fw-main1-bottom i {
+    display: block;
+    font-size:30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.fw-main1-bottom .tem {
+    color: #384c78;
+    font-size: 18px;
+}
+
+/* main2部分 */
+.fw-main2 {
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    height: 521px;
+    margin: 40px auto 0px;
+}
+
+.fw-main2-left {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid rgb(224, 216, 216);
+    width: 740px;
+    height: 100%;
+}
+
+.fw-main2-left-top {
+    position: relative;
+    width: 684px;
+    height: 30px;
+    margin: 20px 30px;
+}
+
+.fw-main2-left-top .fi {
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.fw-main2-left-top .th {
+    text-align: center;
+    line-height: 24px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 105px;
+    height: 28px;
+    border-radius: 14px;
+    border: 1px solid #c2bebe;
+    background-color: rgb(248, 250, 255);
+    font-size: 13px;
+}
+
+.fw-main2-left-bottom {
+    position: relative;
+    width: 100%;
+    height: 451px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fw-main2-left-bottom .i1 {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 170px;
+    margin-left: 18px;
+}
+
+.fw-main2-left-bottom .i3 {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.fw-main2-left-bottom .date {
+    text-align: center;
+    font-size: 14px;
+    color: #384c78;
+    margin-bottom: 12px;
+}
+
+.fw-main2-left-bottom .day {
+    text-align: center;
+    font-size: 12px;
+    color: #8a9baf;
+    margin-bottom: 30px;
+}
+
+.fw-main2-left-bottom .weather1,
+.fw-main2-left-bottom .weather2 {
+    text-align: center;
+    font-size: 14px;
+    color: #384c78;
+    margin-bottom: 20px;
+}
+
+.fw-main2-left-bottom .wind {
+    text-align: center;
+    font-size: 12px;
+    color: #8a9baf;
+}
+
+.fw-main2-right {
+    position: relative;
+    width: 430px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.fw-main2-right-top {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+.fw-main2-right-top .turn{
+    position: absolute;
+    top:0px;
+    right:20px;
+}
+.fw-main2-right-top .fi {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.fw-main2-right-bottom {
+    width: 428px;
+    height: 471px;
+    overflow: hidden;
+}
+
+.fw-main2-right-bottom>div {
+    transition: all .7s;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 200%;
+    height: 100%;
+}
+
+/* 下面这一行控制的是十二个小的模块*/
+/* 但只是容器大小*/
+.fw-main2-right-bottom>div>div {
+    width: 200px;
+    height: 140px;
+    background-color: #fff;
+    border: 1px solid rgb(224, 216, 216);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 下面这一行是实际高度，也就是140*2=280px */
+.fw-main2-right-bottom>div>div>div {
+    transition: all 0.5s;
+    width: 100%;
+    height: 200%;
+}
+
+.fw-main2-right-bottom>div .icon,
+.fw-main2-right-bottom>div .detail {
+    width: 100%;
+    height: 140px;
+    text-align: center;
+}
+
+/* footer部分 */
+.fw-footer {
+    width: 100%;
+    height: 214px;
+    padding-top: 50px;
+    background-color: rgb(58, 69, 112);
+    text-align: center;
+    color: #fff;
+    font-size: 9px;
+}
+
+.fw-footer .footer-img {
+    width: 600px;
+    height: 40px;
+    margin: 0px auto 50px;
+}
